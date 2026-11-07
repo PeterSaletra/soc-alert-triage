@@ -1,0 +1,88 @@
+{
+  "val": {
+    "n_alerts": 36131,
+    "outcomes": {
+      "true_alert": 36112,
+      "false_alarm": 19
+    },
+    "by_ids_pred": {
+      "DoS Hulk": {
+        "false_alarm": 19,
+        "true_alert": 34949
+      },
+      "FTP-Patator": {
+        "false_alarm": 0,
+        "true_alert": 1163
+      }
+    },
+    "confidence_threshold_baseline": {
+      "reject_if_ids_conf_below_0.6": {
+        "false_alarms_rejected": 14,
+        "false_alarms_total": 19,
+        "other_alerts_rejected": 29,
+        "other_alerts_total": 36112
+      },
+      "reject_if_ids_conf_below_0.7": {
+        "false_alarms_rejected": 17,
+        "false_alarms_total": 19,
+        "other_alerts_rejected": 67,
+        "other_alerts_total": 36112
+      },
+      "reject_if_ids_conf_below_0.8": {
+        "false_alarms_rejected": 19,
+        "false_alarms_total": 19,
+        "other_alerts_rejected": 129,
+        "other_alerts_total": 36112
+      },
+      "reject_if_ids_conf_below_0.9": {
+        "false_alarms_rejected": 19,
+        "false_alarms_total": 19,
+        "other_alerts_rejected": 290,
+        "other_alerts_total": 36112
+      }
+    }
+  },
+  "test": {
+    "n_alerts": 35670,
+    "outcomes": {
+      "true_alert": 35652,
+      "false_alarm": 18
+    },
+    "by_ids_pred": {
+      "DoS Hulk": {
+        "false_alarm": 18,
+        "true_alert": 34366
+      },
+      "FTP-Patator": {
+        "false_alarm": 0,
+        "true_alert": 1286
+      }
+    },
+    "confidence_threshold_baseline": {
+      "reject_if_ids_conf_below_0.6": {
+        "false_alarms_rejected": 11,
+        "false_alarms_total": 18,
+        "other_alerts_rejected": 29,
+        "other_alerts_total": 35652
+      },
+      "reject_if_ids_conf_below_0.7": {
+        "false_alarms_rejected": 15,
+        "false_alarms_total": 18,
+        "other_alerts_rejected": 59,
+        "other_alerts_total": 35652
+      },
+      "reject_if_ids_conf_below_0.8": {
+        "false_alarms_rejected": 16,
+        "false_alarms_total": 18,
+        "other_alerts_rejected": 139,
+        "other_alerts_total": 35652
+      },
+      "reject_if_ids_conf_below_0.9": {
+        "false_alarms_rejected": 17,
+        "false_alarms_total": 18,
+        "other_alerts_rejected": 260,
+        "other_alerts_total": 35652
+      }
+    }
+  }
+}
