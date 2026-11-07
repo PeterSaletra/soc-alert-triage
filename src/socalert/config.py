@@ -27,4 +27,4 @@ VAL_FOLDS = (3,)
 TEST_FOLDS = (4,)
 
 # Bookkeeping columns, never used as model features.
-META_COLS = ["src_file", "row_id", "group", "uid"]
+META_COLS = ["src_file", "row_id", "group", "uid", "fold"]

@@ -6,7 +6,6 @@ Cards below are the exact LLM input text. The `Reference` line is evaluation-onl
 ## False alarms (18: real BENIGN flagged by IDS)
 
 ```text
-Alert test-Monday-WorkingHours:46453
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.45, DoS Hulk 0.55, FTP-Patator 0.00
 Flow observations:
@@ -31,7 +30,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Monday-WorkingHours:194346
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.36, DoS Hulk 0.64, FTP-Patator 0.00
 Flow observations:
@@ -56,7 +54,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Monday-WorkingHours:194444
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.40, DoS Hulk 0.60, FTP-Patator 0.00
 Flow observations:
@@ -81,7 +78,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Monday-WorkingHours:293071
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.39, DoS Hulk 0.61, FTP-Patator 0.00
 Flow observations:
@@ -106,7 +102,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Monday-WorkingHours:333242
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.17, DoS Hulk 0.83, FTP-Patator 0.00
 Flow observations:
@@ -131,7 +126,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Monday-WorkingHours:334755
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.31, DoS Hulk 0.69, FTP-Patator 0.00
 Flow observations:
@@ -156,7 +150,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Monday-WorkingHours:477247
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.46, DoS Hulk 0.54, FTP-Patator 0.00
 Flow observations:
@@ -181,7 +174,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Thursday-WorkingHours-Afternoon-Infilteration:16436
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.40, DoS Hulk 0.60, FTP-Patator 0.00
 Flow observations:
@@ -206,7 +198,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Thursday-WorkingHours-Afternoon-Infilteration:256720
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.08, DoS Hulk 0.92, FTP-Patator 0.00
 Flow observations:
@@ -231,7 +222,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Thursday-WorkingHours-Afternoon-Infilteration:262145
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.46, DoS Hulk 0.54, FTP-Patator 0.00
 Flow observations:
@@ -256,7 +246,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Thursday-WorkingHours-Morning-WebAttacks:116430
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.47, DoS Hulk 0.53, FTP-Patator 0.00
 Flow observations:
@@ -281,7 +270,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Thursday-WorkingHours-Morning-WebAttacks:116439
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.48, DoS Hulk 0.52, FTP-Patator 0.00
 Flow observations:
@@ -306,7 +294,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Tuesday-WorkingHours:160473
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.39, DoS Hulk 0.61, FTP-Patator 0.00
 Flow observations:
@@ -331,7 +318,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Tuesday-WorkingHours:161221
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.49, DoS Hulk 0.51, FTP-Patator 0.00
 Flow observations:
@@ -356,7 +342,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Tuesday-WorkingHours:161260
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.45, DoS Hulk 0.55, FTP-Patator 0.00
 Flow observations:
@@ -381,7 +366,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Tuesday-WorkingHours:188552
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.44, DoS Hulk 0.56, FTP-Patator 0.00
 Flow observations:
@@ -406,7 +390,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Wednesday-workingHours:345016
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.20, DoS Hulk 0.80, FTP-Patator 0.00
 Flow observations:
@@ -431,7 +414,6 @@ Flow observations:
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
 ```text
-Alert test-Wednesday-workingHours:345019
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.47, DoS Hulk 0.53, FTP-Patator 0.00
 Flow observations:
@@ -455,10 +437,9 @@ Flow observations:
 ```
 Reference: {'label': 'BENIGN', 'outcome': 'false_alarm'}
 
-## True alerts (random sample, 3 per attack)
+## True alerts (random sample, up to 3 per attack)
 
 ```text
-Alert test-Wednesday-workingHours:233442
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.00, DoS Hulk 1.00, FTP-Patator 0.00
 Flow observations:
@@ -483,7 +464,6 @@ Flow observations:
 Reference: {'label': 'DoS Hulk', 'outcome': 'true_alert'}
 
 ```text
-Alert test-Wednesday-workingHours:303478
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.00, DoS Hulk 1.00, FTP-Patator 0.00
 Flow observations:
@@ -508,7 +488,6 @@ Flow observations:
 Reference: {'label': 'DoS Hulk', 'outcome': 'true_alert'}
 
 ```text
-Alert test-Wednesday-workingHours:172112
 IDS prediction (model output, not confirmed): DoS Hulk
 IDS class scores: BENIGN 0.00, DoS Hulk 1.00, FTP-Patator 0.00
 Flow observations:
@@ -533,7 +512,6 @@ Flow observations:
 Reference: {'label': 'DoS Hulk', 'outcome': 'true_alert'}
 
 ```text
-Alert test-Tuesday-WorkingHours:65006
 IDS prediction (model output, not confirmed): FTP-Patator
 IDS class scores: BENIGN 0.00, DoS Hulk 0.00, FTP-Patator 1.00
 Flow observations:
@@ -558,7 +536,6 @@ Flow observations:
 Reference: {'label': 'FTP-Patator', 'outcome': 'true_alert'}
 
 ```text
-Alert test-Tuesday-WorkingHours:41878
 IDS prediction (model output, not confirmed): FTP-Patator
 IDS class scores: BENIGN 0.00, DoS Hulk 0.00, FTP-Patator 1.00
 Flow observations:
@@ -583,7 +560,6 @@ Flow observations:
 Reference: {'label': 'FTP-Patator', 'outcome': 'true_alert'}
 
 ```text
-Alert test-Tuesday-WorkingHours:49377
 IDS prediction (model output, not confirmed): FTP-Patator
 IDS class scores: BENIGN 0.00, DoS Hulk 0.00, FTP-Patator 1.00
 Flow observations:

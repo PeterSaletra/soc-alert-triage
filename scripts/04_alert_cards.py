@@ -41,7 +41,7 @@ def build_alerts(split: str) -> list:
         records.append(
             {
                 "id": aid,
-                "card": build_card(aid, row, proba),
+                "card": build_card(row, proba),
                 "ids_pred": r["pred"],
                 "ids_proba": proba,
                 "observations": flow_observations(row),
@@ -56,7 +56,7 @@ def main() -> None:
     summary, test_alerts = {}, None
     for split in ("val", "test"):
         alerts = build_alerts(split)
-        with open(PROCESSED_DIR / f"alerts_{split}.jsonl", "w") as f:
+        with open(PROCESSED_DIR / f"alerts_{split}.jsonl", "w", encoding="utf-8") as f:
             for a in alerts:
                 f.write(json.dumps(a) + "\n")
         oc = pd.Series([a["reference"]["outcome"] for a in alerts]).value_counts().to_dict()
@@ -67,7 +67,7 @@ def main() -> None:
             .to_dict("index")
         )
         # Trivial reference triage Llama has to beat: reject alerts the IDS itself is unsure about.
-        is_fa = np.array([a["reference"]["outcome"] == "false_alarm" for a in alerts])
+        is_fa = np.array([a["reference"]["outcome"] == "false_alarm" for a in alerts], dtype=bool)
         conf = np.array([max(a["ids_proba"].values()) for a in alerts])
         baseline = {
             f"reject_if_ids_conf_below_{t}": {
@@ -87,7 +87,7 @@ def main() -> None:
         if split == "test":
             test_alerts = alerts
 
-    (REPORTS_DIR / "04_alert_cards_summary.json").write_text(json.dumps(summary, indent=2))
+    (REPORTS_DIR / "04_alert_cards_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
     rng = np.random.RandomState(SEED)
     fa = [a for a in test_alerts if a["reference"]["outcome"] == "false_alarm"]
@@ -95,7 +95,7 @@ def main() -> None:
     sample_true = []
     for cls in ("DoS Hulk", "FTP-Patator"):
         pool = [a for a in ta if a["ids_pred"] == cls]
-        sample_true += [pool[i] for i in rng.choice(len(pool), size=3, replace=False)]
+        sample_true += [pool[i] for i in rng.choice(len(pool), size=min(3, len(pool)), replace=False)]
 
     md = [
         "# Alert card samples (test split)",
@@ -108,13 +108,15 @@ def main() -> None:
     ]
     for a in fa:
         md += ["```text", a["card"], "```", f"Reference: {a['reference']}", ""]
-    md += ["## True alerts (random sample, 3 per attack)", ""]
+    md += ["## True alerts (random sample, up to 3 per attack)", ""]
     for a in sample_true:
         md += ["```text", a["card"], "```", f"Reference: {a['reference']}", ""]
-    (REPORTS_DIR / "04_alert_cards_sample.md").write_text("\n".join(md))
+    (REPORTS_DIR / "04_alert_cards_sample.md").write_text("\n".join(md), encoding="utf-8")
     print(json.dumps(summary, indent=2))
-    print("\n--- example false-alarm card ---\n" + fa[0]["card"])
-    print("\n--- example true-alert card ---\n" + sample_true[-1]["card"])
+    if fa:
+        print("\n--- example false-alarm card ---\n" + fa[0]["card"])
+    if sample_true:
+        print("\n--- example true-alert card ---\n" + sample_true[-1]["card"])
 
 
 if __name__ == "__main__":

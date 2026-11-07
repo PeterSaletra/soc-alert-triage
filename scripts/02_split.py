@@ -112,7 +112,7 @@ def main() -> None:
         }
         p.to_parquet(PROCESSED_DIR / f"{name}.parquet", index=False)
 
-    (REPORTS_DIR / "02_split_report.json").write_text(json.dumps(rep, indent=2))
+    (REPORTS_DIR / "02_split_report.json").write_text(json.dumps(rep, indent=2), encoding="utf-8")
 
     lines = [
         "# Split report",
@@ -148,7 +148,7 @@ def main() -> None:
         "",
         f"Checks: group overlap between splits = 0; identical feature vectors across splits = {feat_overlap}.",
     ]
-    (REPORTS_DIR / "02_split_report.md").write_text("\n".join(lines) + "\n")
+    (REPORTS_DIR / "02_split_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
 

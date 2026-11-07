@@ -41,11 +41,10 @@ def flow_observations(row) -> dict:
     return {label: _fmt(row[col], kind) for col, label, kind in CARD_FIELDS}
 
 
-def build_card(alert_id: str, row, proba: dict) -> str:
+def build_card(row, proba: dict) -> str:
     pred = max(proba, key=proba.get)
     scores = ", ".join(f"{c} {proba[c]:.2f}" for c in CLASSES)
     lines = [
-        f"Alert {alert_id}",
         f"IDS prediction (model output, not confirmed): {pred}",
         f"IDS class scores: {scores}",
         "Flow observations:",

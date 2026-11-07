@@ -83,9 +83,9 @@ def main() -> None:
         "alerts": alert_outcomes(test[LABEL_COL], abl_pred),
     }
 
-    (REPORTS_DIR / "03_rf_report.json").write_text(json.dumps(rep, indent=2))
+    (REPORTS_DIR / "03_rf_report.json").write_text(json.dumps(rep, indent=2), encoding="utf-8")
     md = render(rep)
-    (REPORTS_DIR / "03_rf_report.md").write_text(md)
+    (REPORTS_DIR / "03_rf_report.md").write_text(md, encoding="utf-8")
     print(md)
 
 

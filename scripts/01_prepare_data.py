@@ -112,8 +112,8 @@ def main() -> None:
     rep["all_label_counts"] = all_counts
 
     df.to_parquet(INTERIM_DIR / "cic3_raw.parquet", index=False)
-    (REPORTS_DIR / "01_data_report.json").write_text(json.dumps(rep, indent=2))
-    (REPORTS_DIR / "01_data_report.md").write_text(to_markdown(rep))
+    (REPORTS_DIR / "01_data_report.json").write_text(json.dumps(rep, indent=2), encoding="utf-8")
+    (REPORTS_DIR / "01_data_report.md").write_text(to_markdown(rep), encoding="utf-8")
     print(to_markdown(rep))
 
 
