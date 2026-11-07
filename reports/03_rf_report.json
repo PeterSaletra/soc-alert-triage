@@ -1,0 +1,432 @@
+{
+  "sweep_val": {
+    "rf_default": {
+      "params": {},
+      "fit_seconds": 42.6,
+      "labels": [
+        "BENIGN",
+        "DoS Hulk",
+        "FTP-Patator"
+      ],
+      "confusion_matrix": [
+        [
+          419241,
+          27,
+          0
+        ],
+        [
+          39,
+          34953,
+          0
+        ],
+        [
+          14,
+          0,
+          1163
+        ]
+      ],
+      "per_class": {
+        "BENIGN": {
+          "precision": 0.9998735970464638,
+          "recall": 0.9999356020492859,
+          "f1": 0.9999045985866281,
+          "support": 419268
+        },
+        "DoS Hulk": {
+          "precision": 0.9992281303602059,
+          "recall": 0.9988854595336076,
+          "f1": 0.9990567655633682,
+          "support": 34992
+        },
+        "FTP-Patator": {
+          "precision": 1.0,
+          "recall": 0.9881053525913339,
+          "f1": 0.994017094017094,
+          "support": 1177
+        }
+      },
+      "macro_f1": 0.9976594860556968,
+      "macro_f1_attacks_only": 0.9965369297902311,
+      "accuracy": 0.9998243445306376
+    },
+    "rf_balanced": {
+      "params": {
+        "class_weight": "balanced_subsample"
+      },
+      "fit_seconds": 39.3,
+      "labels": [
+        "BENIGN",
+        "DoS Hulk",
+        "FTP-Patator"
+      ],
+      "confusion_matrix": [
+        [
+          419239,
+          29,
+          0
+        ],
+        [
+          39,
+          34953,
+          0
+        ],
+        [
+          14,
+          0,
+          1163
+        ]
+      ],
+      "per_class": {
+        "BENIGN": {
+          "precision": 0.9998735964435286,
+          "recall": 0.9999308318307145,
+          "f1": 0.999902213318069,
+          "support": 419268
+        },
+        "DoS Hulk": {
+          "precision": 0.9991710022297181,
+          "recall": 0.9988854595336076,
+          "f1": 0.9990282104781776,
+          "support": 34992
+        },
+        "FTP-Patator": {
+          "precision": 1.0,
+          "recall": 0.9881053525913339,
+          "f1": 0.994017094017094,
+          "support": 1177
+        }
+      },
+      "macro_f1": 0.9976491726044469,
+      "macro_f1_attacks_only": 0.9965226522476358,
+      "accuracy": 0.9998199531439036
+    },
+    "rf_leaf5": {
+      "params": {
+        "min_samples_leaf": 5
+      },
+      "fit_seconds": 42.9,
+      "labels": [
+        "BENIGN",
+        "DoS Hulk",
+        "FTP-Patator"
+      ],
+      "confusion_matrix": [
+        [
+          419249,
+          19,
+          0
+        ],
+        [
+          43,
+          34949,
+          0
+        ],
+        [
+          14,
+          0,
+          1163
+        ]
+      ],
+      "per_class": {
+        "BENIGN": {
+          "precision": 0.9998640610914225,
+          "recall": 0.9999546829235716,
+          "f1": 0.9999093699542319,
+          "support": 419268
+        },
+        "DoS Hulk": {
+          "precision": 0.9994566460764127,
+          "recall": 0.9987711476909008,
+          "f1": 0.9991137793024586,
+          "support": 34992
+        },
+        "FTP-Patator": {
+          "precision": 1.0,
+          "recall": 0.9881053525913339,
+          "f1": 0.994017094017094,
+          "support": 1177
+        }
+      },
+      "macro_f1": 0.9976800810912615,
+      "macro_f1_attacks_only": 0.9965654366597763,
+      "accuracy": 0.9998331273041057
+    }
+  },
+  "chosen": "rf_leaf5",
+  "feature_selection": {
+    "start": 78,
+    "constant_dropped": [
+      "Bwd PSH Flags",
+      "Bwd URG Flags",
+      "Fwd Avg Bytes/Bulk",
+      "Fwd Avg Packets/Bulk",
+      "Fwd Avg Bulk Rate",
+      "Bwd Avg Bytes/Bulk",
+      "Bwd Avg Packets/Bulk",
+      "Bwd Avg Bulk Rate"
+    ],
+    "correlated_dropped": [
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "CWE Flag Count",
+      "ECE Flag Count",
+      "Fwd IAT Max",
+      "Fwd IAT Total",
+      "Fwd Packets/s",
+      "Idle Max",
+      "Idle Mean",
+      "Packet Length Std",
+      "SYN Flag Count",
+      "Subflow Bwd Bytes",
+      "Subflow Bwd Packets",
+      "Subflow Fwd Bytes",
+      "Subflow Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Bwd Packets"
+    ],
+    "after_variance_corr": 52,
+    "importance_top_k": {
+      "Bwd Packet Length Std": 0.13852,
+      "Max Packet Length": 0.11122,
+      "Bwd Packet Length Mean": 0.09976,
+      "Destination Port": 0.07586,
+      "Packet Length Variance": 0.06768,
+      "Bwd Packet Length Max": 0.05029,
+      "Flow IAT Max": 0.04565,
+      "Flow Packets/s": 0.04103,
+      "Packet Length Mean": 0.03927,
+      "Flow IAT Mean": 0.03818,
+      "Fwd Packet Length Max": 0.03575,
+      "Flow IAT Std": 0.02947,
+      "Fwd Packet Length Std": 0.02872,
+      "Fwd IAT Std": 0.02231,
+      "Fwd IAT Mean": 0.01973,
+      "Fwd Packet Length Mean": 0.01458,
+      "Flow Duration": 0.01145,
+      "Bwd Packets/s": 0.01057,
+      "Idle Min": 0.01005,
+      "Fwd Header Length": 0.0096,
+      "Bwd Header Length": 0.00949,
+      "Init_Win_bytes_forward": 0.00931,
+      "FIN Flag Count": 0.00772,
+      "Total Fwd Packets": 0.00701,
+      "Init_Win_bytes_backward": 0.00686,
+      "Bwd IAT Min": 0.00626,
+      "Bwd IAT Max": 0.00616,
+      "Min Packet Length": 0.00545,
+      "Fwd IAT Min": 0.00501,
+      "Total Length of Fwd Packets": 0.0046
+    },
+    "final": 30
+  },
+  "selected_features": [
+    "Bwd Packet Length Std",
+    "Max Packet Length",
+    "Bwd Packet Length Mean",
+    "Destination Port",
+    "Packet Length Variance",
+    "Bwd Packet Length Max",
+    "Flow IAT Max",
+    "Flow Packets/s",
+    "Packet Length Mean",
+    "Flow IAT Mean",
+    "Fwd Packet Length Max",
+    "Flow IAT Std",
+    "Fwd Packet Length Std",
+    "Fwd IAT Std",
+    "Fwd IAT Mean",
+    "Fwd Packet Length Mean",
+    "Flow Duration",
+    "Bwd Packets/s",
+    "Idle Min",
+    "Fwd Header Length",
+    "Bwd Header Length",
+    "Init_Win_bytes_forward",
+    "FIN Flag Count",
+    "Total Fwd Packets",
+    "Init_Win_bytes_backward",
+    "Bwd IAT Min",
+    "Bwd IAT Max",
+    "Min Packet Length",
+    "Fwd IAT Min",
+    "Total Length of Fwd Packets"
+  ],
+  "val": {
+    "labels": [
+      "BENIGN",
+      "DoS Hulk",
+      "FTP-Patator"
+    ],
+    "confusion_matrix": [
+      [
+        419249,
+        19,
+        0
+      ],
+      [
+        43,
+        34949,
+        0
+      ],
+      [
+        14,
+        0,
+        1163
+      ]
+    ],
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9998640610914225,
+        "recall": 0.9999546829235716,
+        "f1": 0.9999093699542319,
+        "support": 419268
+      },
+      "DoS Hulk": {
+        "precision": 0.9994566460764127,
+        "recall": 0.9987711476909008,
+        "f1": 0.9991137793024586,
+        "support": 34992
+      },
+      "FTP-Patator": {
+        "precision": 1.0,
+        "recall": 0.9881053525913339,
+        "f1": 0.994017094017094,
+        "support": 1177
+      }
+    },
+    "macro_f1": 0.9976800810912615,
+    "macro_f1_attacks_only": 0.9965654366597763,
+    "accuracy": 0.9998331273041057,
+    "alerts": {
+      "n_alerts": 36131,
+      "true_alert": 36112,
+      "wrong_attack_type": 0,
+      "false_alarm": 19,
+      "missed_attack": 57,
+      "false_alarm_by_predicted_class": {
+        "DoS Hulk": 19,
+        "FTP-Patator": 0
+      },
+      "alert_precision": 0.999474135783676
+    }
+  },
+  "test": {
+    "labels": [
+      "BENIGN",
+      "DoS Hulk",
+      "FTP-Patator"
+    ],
+    "confusion_matrix": [
+      [
+        419254,
+        18,
+        0
+      ],
+      [
+        44,
+        34366,
+        0
+      ],
+      [
+        1,
+        0,
+        1286
+      ]
+    ],
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9998926780173576,
+        "recall": 0.9999570684424431,
+        "f1": 0.9999248721932907,
+        "support": 419272
+      },
+      "DoS Hulk": {
+        "precision": 0.9994765006979991,
+        "recall": 0.9987213019471084,
+        "f1": 0.9990987586126697,
+        "support": 34410
+      },
+      "FTP-Patator": {
+        "precision": 1.0,
+        "recall": 0.9992229992229992,
+        "f1": 0.9996113486202876,
+        "support": 1287
+      }
+    },
+    "macro_f1": 0.9995449931420827,
+    "macro_f1_attacks_only": 0.9993550536164786,
+    "accuracy": 0.9998615290272524,
+    "alerts": {
+      "n_alerts": 35670,
+      "true_alert": 35652,
+      "wrong_attack_type": 0,
+      "false_alarm": 18,
+      "missed_attack": 45,
+      "false_alarm_by_predicted_class": {
+        "DoS Hulk": 18,
+        "FTP-Patator": 0
+      },
+      "alert_precision": 0.9994953742640875
+    }
+  },
+  "test_no_destination_port": {
+    "labels": [
+      "BENIGN",
+      "DoS Hulk",
+      "FTP-Patator"
+    ],
+    "confusion_matrix": [
+      [
+        419239,
+        31,
+        2
+      ],
+      [
+        92,
+        34318,
+        0
+      ],
+      [
+        3,
+        0,
+        1284
+      ]
+    ],
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9997734502806832,
+        "recall": 0.999921292144479,
+        "f1": 0.9998473657474428,
+        "support": 419272
+      },
+      "DoS Hulk": {
+        "precision": 0.9990974991993945,
+        "recall": 0.9973263586166812,
+        "f1": 0.9982111432685176,
+        "support": 34410
+      },
+      "FTP-Patator": {
+        "precision": 0.9984447900466563,
+        "recall": 0.9976689976689976,
+        "f1": 0.998056743101438,
+        "support": 1287
+      }
+    },
+    "macro_f1": 0.9987050840391328,
+    "macro_f1_attacks_only": 0.9981339431849778,
+    "accuracy": 0.9997186621506081,
+    "alerts": {
+      "n_alerts": 35635,
+      "true_alert": 35602,
+      "wrong_attack_type": 0,
+      "false_alarm": 33,
+      "missed_attack": 95,
+      "false_alarm_by_predicted_class": {
+        "DoS Hulk": 31,
+        "FTP-Patator": 2
+      },
+      "alert_precision": 0.9990739441560264
+    }
+  }
+}

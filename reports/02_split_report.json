@@ -1,0 +1,93 @@
+{
+  "block_rows": 2000,
+  "seed": 42,
+  "inf_cells_replaced_with_nan": 4100,
+  "pipeline_counts": {
+    "raw": {
+      "BENIGN": 2273097,
+      "DoS Hulk": 231073,
+      "FTP-Patator": 7938
+    },
+    "after_exact_dedup": {
+      "BENIGN": 2096484,
+      "DoS Hulk": 172849,
+      "FTP-Patator": 5933
+    },
+    "after_conflict_drop": {
+      "BENIGN": 2096354,
+      "DoS Hulk": 172719,
+      "FTP-Patator": 5933
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 1364600,
+      "share_of_rows": 0.5998,
+      "n_groups": 825,
+      "class_counts": {
+        "BENIGN": 1257814,
+        "DoS Hulk": 103317,
+        "FTP-Patator": 3469
+      },
+      "class_share": {
+        "BENIGN": 0.92175,
+        "DoS Hulk": 0.07571,
+        "FTP-Patator": 0.00254
+      },
+      "class_share_of_class_total": {
+        "BENIGN": 0.6,
+        "DoS Hulk": 0.5982,
+        "FTP-Patator": 0.5847
+      },
+      "rows_with_nan": 837
+    },
+    "val": {
+      "rows": 455437,
+      "share_of_rows": 0.2002,
+      "n_groups": 274,
+      "class_counts": {
+        "BENIGN": 419268,
+        "DoS Hulk": 34992,
+        "FTP-Patator": 1177
+      },
+      "class_share": {
+        "BENIGN": 0.92058,
+        "DoS Hulk": 0.07683,
+        "FTP-Patator": 0.00258
+      },
+      "class_share_of_class_total": {
+        "BENIGN": 0.2,
+        "DoS Hulk": 0.2026,
+        "FTP-Patator": 0.1984
+      },
+      "rows_with_nan": 322
+    },
+    "test": {
+      "rows": 454969,
+      "share_of_rows": 0.2,
+      "n_groups": 275,
+      "class_counts": {
+        "BENIGN": 419272,
+        "DoS Hulk": 34410,
+        "FTP-Patator": 1287
+      },
+      "class_share": {
+        "BENIGN": 0.92154,
+        "DoS Hulk": 0.07563,
+        "FTP-Patator": 0.00283
+      },
+      "class_share_of_class_total": {
+        "BENIGN": 0.2,
+        "DoS Hulk": 0.1992,
+        "FTP-Patator": 0.2169
+      },
+      "rows_with_nan": 271
+    }
+  },
+  "feature_vector_overlap_between_splits": {
+    "train&val": 0,
+    "train&test": 0,
+    "val&test": 0
+  },
+  "group_overlap_between_splits": 0
+}

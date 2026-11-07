@@ -1,0 +1,68 @@
+{
+  "rows_total": 2512108,
+  "class_counts": {
+    "BENIGN": 2273097,
+    "DoS Hulk": 231073,
+    "FTP-Patator": 7938
+  },
+  "n_features": 77,
+  "nan": {
+    "rows_with_nan_per_class": {
+      "BENIGN": 409,
+      "DoS Hulk": 949,
+      "FTP-Patator": 0
+    },
+    "cells_per_column": {
+      "Flow Bytes/s": 1358
+    }
+  },
+  "inf": {
+    "rows_with_inf_per_class": {
+      "BENIGN": 1777,
+      "DoS Hulk": 949,
+      "FTP-Patator": 3
+    },
+    "cells_per_column": {
+      "Flow Bytes/s": 1371,
+      "Flow Packets/s": 2729
+    },
+    "pos_inf_cells": 4100,
+    "neg_inf_cells": 0
+  },
+  "duplicates": {
+    "exact_dup_rows_per_class": {
+      "BENIGN": 176613,
+      "DoS Hulk": 58224,
+      "FTP-Patator": 2005
+    },
+    "exact_dup_rows_total": 236842,
+    "rows_after_exact_dedup_per_class": {
+      "BENIGN": 2096484,
+      "DoS Hulk": 172849,
+      "FTP-Patator": 5933
+    },
+    "conflicting_unique_rows_per_class": {
+      "BENIGN": 130,
+      "DoS Hulk": 130,
+      "FTP-Patator": 0
+    },
+    "dup_rows_across_files_only": 51902
+  },
+  "all_label_counts": {
+    "DDoS": 128027,
+    "BENIGN": 2273097,
+    "PortScan": 158930,
+    "Bot": 1966,
+    "Infiltration": 36,
+    "Web Attack \u00ef\u00bf\u00bd Brute Force": 1507,
+    "Web Attack \u00ef\u00bf\u00bd XSS": 652,
+    "Web Attack \u00ef\u00bf\u00bd Sql Injection": 21,
+    "FTP-Patator": 7938,
+    "SSH-Patator": 5897,
+    "DoS Hulk": 231073,
+    "DoS GoldenEye": 10293,
+    "DoS slowloris": 5796,
+    "DoS Slowhttptest": 5499,
+    "Heartbleed": 11
+  }
+}

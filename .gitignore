@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# soc-alert-triage: data and model artifacts (large, reproducible from scripts/)
+/data/
+/models/
